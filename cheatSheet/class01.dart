@@ -27,7 +27,7 @@ void main(List<String> arguments) {
 
   String quote = "Be yourself, everyone else is already taken";
   String author = "Oscar Wilde";
-  print("$author once said, '$quote'.");
+  print('$author once said, "$quote".');
 
   /*
     2. Assign a message to a variable, and print that message. Then change the value of
@@ -36,8 +36,8 @@ void main(List<String> arguments) {
 
   String message = "I love you";
   print(message);
-  String fixmessage = message.replaceAll("love", "adore");
-  print(fixmessage.toUpperCase());
+  message = "Love you too";
+  print(message.toUpperCase());
 
   /*
     3.  Remove all the spaces from the rhyme. And print the modified rhyme.
@@ -55,17 +55,17 @@ void main(List<String> arguments) {
     4. Capitalise and display the users full name with each word having a capital
     first letter, and the other letters being lowercase.
    */
-/*
+
   print("Hvað heitir þú?");
   String firstname = stdin.readLineSync(encoding: utf8).toString();
   print("Hvað heitir þú að seinna nafni?");
   String lastname = stdin.readLineSync(encoding: utf8).toString();
-  String fullname = firstname + " " + lastname;
-  print(fullname.toUpperCase());
-  String fixfirstname = firstname.replaceAll(firstname, "Atli");
-  print(fixfirstname);
-  print(fixfirstname.toTitleCase + " " + lastname.toTitleCase);
-  */
+  //firstname = "Pulsa";
+  print(firstname.toUpperCase() + " " + lastname.toUpperCase());
+  String capfirstname = firstname.substring(0,1).toUpperCase() + firstname.substring(1,firstname.length).toLowerCase();
+  String caplastname = lastname.substring(0,1).toUpperCase() + lastname.substring(1,lastname.length).toLowerCase();
+  print(caplastname + " " + capfirstname);
+
 
  /*
     5. Display the following SSN on the correct Format:
@@ -76,7 +76,7 @@ void main(List<String> arguments) {
   String fixSSN1 = SSN1.replaceAll("-", "");
   print(fixSSN1);
   String SSN2 = "200689 2409";
-  String fixSSN2 = SSN2.replaceAll("-", " ");
+  String fixSSN2 = SSN2.replaceAll(" ", "");
   print(fixSSN2);
   String SSN3 = "2 006 8924 09";
   String first = fixSSN1.substring(0,1);
@@ -84,7 +84,7 @@ void main(List<String> arguments) {
   String third = fixSSN1.substring(4,8);
   String fourth = fixSSN1.substring(8,10);
 
-  print(first + " " + second  + " " + third  + " " + fourth);
+  print(first + second  + third  + fourth);
 
   /*
   Bónus task calculate the age from the SSN.

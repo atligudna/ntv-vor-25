@@ -19,10 +19,12 @@ void main(List<String> arguments) {
     }
     int? phoneNumberStorage = int.tryParse(phoneNumber);
     if (phoneNumber.length == 7 && phoneNumberStorage is int) {
+      print("Ok nice, ég er með rétta lengd en þetta eiga bara að vera tölustafir");
       if (phoneNumber[0] != "1") {
         print("þetta símanúmer er valid");
         validNumber = true;
       }
+      print("Ertu ekki að grínast, af hverju byrjar númerið þitt á 1.");
     }
   }
 }
