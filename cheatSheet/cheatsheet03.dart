@@ -10,15 +10,12 @@ void main() {
   //print("The random Number is $randomNumber");
 
   bool rightNumber = true;
-
   while (rightNumber == true) {
     print("Guess a number between 1 og 100");
     String? input = stdin.readLineSync();
-    //print(input);
     int inputNumber = int.parse(input!);
-
     int diff = (inputNumber - randomNumber).abs();
-    print(diff);
+    //print(diff);
 
     if (inputNumber == randomNumber) {
       print("Congratulation. You were right.");
@@ -33,7 +30,7 @@ void main() {
     if (inputNumber > randomNumber && diff > 10){
       print("Your number is way too high. Try again");
     }
-    if (inputNumber >= randomNumber && diff <= 10){
+    if (inputNumber > randomNumber && diff <= 10){
       print("Your number is too high. Try again");
     }
   }
