@@ -21,7 +21,8 @@ void main() {
 
   while (true) {
     stdout.write(
-        "Veldu tölu til að bæta á pöntunarlistann (eða skrifaðu 'exit' til að hætta) \n");
+        "Veldu tölu til að bæta á pöntunarlistann "
+            "(eða skrifaðu 'exit' til að hætta) \n");
 
     String? input = stdin.readLineSync();
     if (input == null || input.toLowerCase() == "exit") {
